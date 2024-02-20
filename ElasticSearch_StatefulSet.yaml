@@ -94,6 +94,9 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
+        - name: "ES_INDEX_RETENTION_PERIOD"
+          value: "7d"  # Set index retention to 7 days
+
       volumes:
       - name: elasticsearch-logging
         emptyDir: {}
